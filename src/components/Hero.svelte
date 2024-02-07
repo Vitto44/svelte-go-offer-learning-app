@@ -6,14 +6,14 @@
 
 <header>
 	<div
-		class="bg-gradient-to-r from-blue-700 to-cyan-600 text-stone-100 max-w-5xl mx-auto rounded-xl p-8 grid grid-cols-3 relative mt-24"
+		class="bg-gradient-to-r from-primary to-cyan-600 text-stone-100 max-w-5xl mx-auto rounded-xl p-8 grid grid-cols-3 relative mt-28 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
 	>
 		<div class=" flex gap-4 md:gap-8 flex-col col-span-3 sm:col-span-2">
 			<h1 class="font-semibold text-2xl md:text-5xl">
-				Shortcut to <span class="text-orange-400 font-bold">Free Bets</span>
+				Shortcut to <span class="text-secondary-200 font-bold">Free Bets</span>
 				<br class="hidden lg:inline-block" />
 				and
-				<span class="text-orange-400 font-bold">Wins</span>!
+				<span class="text-secondary-200 font-bold">Wins</span>!
 			</h1>
 			<p class="text-sm md:text-base lg:text-lg sm:mr-12 lg:mr-0">
 				Get the latest free bets and bonuses from the best bookmakers and casinos. We have the best
@@ -23,7 +23,7 @@
 		<img
 			src={heroImage}
 			alt="hero"
-			class="absolute max-w-44 sm:max-w-64 md:max-w-80 right-0 -top-28 sm:-top-16"
+			class="absolute max-w-36 sm:max-w-64 md:max-w-80 right-0 -top-24 sm:-top-16"
 		/>
 	</div>
 </header>
