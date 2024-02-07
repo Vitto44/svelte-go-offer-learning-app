@@ -1,0 +1,156 @@
+{
+	"sports": [
+		{
+			"id": 1,
+			"title": "Promo 1",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 4,
+			"category": "Sports",
+			"investment": 10,
+			"reward": 40,
+			"rewardType": "Free Bets",
+			"code": "PROMO1",
+			"isMoney": true,
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 2,
+			"title": "Promo 2",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 3,
+			"category": "Casino",
+			"investment": 20,
+			"reward": 100,
+			"rewardType": "Free Spins",
+			"code": "PROMO2",
+			"isMoney": true,
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 3,
+			"title": "Promo 3",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 5,
+			"category": "Casino",
+			"investment": 30,
+			"reward": 150,
+			"rewardType": "Free Spins",
+			"code": "PROMO3",
+			"isMoney": true,
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 4,
+			"title": "Promo 4",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 2,
+			"category": "Sports",
+			"investment": 40,
+			"reward": 200,
+			"rewardType": "Free Bets",
+			"isMoney": true,
+			"code": "PROMO4",
+			"disclaimer": "New UK 18+ only."
+		}
+	],
+	"casino": [
+		{
+			"id": 5,
+			"title": "Promo 5",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 4,
+			"category": "Casino",
+			"investment": 10,
+			"reward": 40,
+			"rewardType": "Free Spins",
+			"code": "PROMO5",
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 6,
+			"title": "Promo 6",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 3,
+			"category": "Casino",
+			"investment": 20,
+			"reward": 100,
+			"rewardType": "Free Spins",
+			"code": "PROMO6",
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 7,
+			"title": "Promo 7",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 5,
+			"category": "Casino",
+			"investment": 30,
+			"reward": 150,
+			"rewardType": "Free Spins",
+			"code": "PROMO7",
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 8,
+			"title": "Promo 8",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 2,
+			"category": "Casino",
+			"investment": 40,
+			"reward": 200,
+			"rewardType": "Free Spins",
+			"code": "PROMO8",
+			"disclaimer": "New UK 18+ only."
+		}
+	],
+	"esports": [
+		{
+			"id": 9,
+			"title": "Promo 9",
+			"image": "https://images-platform.99static.com//8NczHcfXkcvdEBstpFFGjD5CAAs=/48x11:979x942/fit-in/500x500/projects-files/97/9720/972064/55241b8f-68c5-4d94-b7d4-b3bf632483dd.jpg",
+			"url": "http://www.google.com",
+			"rating": 4,
+			"category": "Esports",
+			"investment": 10,
+			"reward": 40,
+			"isMoney": true,
+			"rewardType": "Free Bets",
+			"code": "PROMO9",
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 10,
+			"title": "Promo 10",
+			"image": "https://marketplace.canva.com/EAFasgWgUyE/6/0/1600w/canva-neon-blue-and-black-gamer-badge-logo-eKEXSFkIoq0.jpg",
+			"url": "http://www.google.com",
+			"rating": 3,
+			"category": "Esports",
+			"investment": 20,
+			"reward": 100,
+			"rewardType": "Free Spins",
+			"code": "PROMO10",
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
+		},
+		{
+			"id": 11,
+			"title": "Promo 11",
+			"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
+			"url": "http://www.google.com",
+			"rating": 5,
+			"category": "Esports",
+			"investment": 30,
+			"reward": 150,
+			"rewardType": "Free Spins",
+			"code": "PROMO11",
+			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering."
+		}
+	]
+}
