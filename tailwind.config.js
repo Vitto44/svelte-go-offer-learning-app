@@ -13,6 +13,9 @@ export default {
 					primary: "#ffffff",
 					gray: "#666666",
 				},
+				fontFamily: {
+					sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+				},
 			},
 		},
 	},
