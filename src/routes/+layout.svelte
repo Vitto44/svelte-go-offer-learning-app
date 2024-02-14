@@ -1,16 +1,14 @@
 <script>
-	import Header from "../components/Header.svelte";
-	import Hero from "../components/Hero.svelte";
+	import Footer from "$lib/Footer.svelte";
+	import Header from "$lib/Header.svelte";
+
 	import "./styles.css";
 </script>
 
-<div class="app">
+<div class="app bg-stone-200 font-sans min-h-screen flex flex-col">
 	<Header />
-	<main>
+	<main class="mx-5">
 		<slot />
 	</main>
-
-	<!-- <footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer> -->
+	<Footer />
 </div>
