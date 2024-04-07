@@ -41,7 +41,7 @@
 		class=" mx-auto gap-10 p-8 mb-8 rounded-2xl flex flex-row bg-gray-100 flex-wrap justify-center shadow-primary"
 	>
 		{#each promotions as promotion (promotion.id)}
-			<Card {promotion} />
+			<Card {promotion} useShadow useMoreInfo />
 		{/each}
 	</section>
 </section>

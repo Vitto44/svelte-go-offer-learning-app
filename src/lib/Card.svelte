@@ -1,14 +1,15 @@
 <script lang="ts">
 	import Stars from "./Stars.svelte";
 
+	export let useShadow = false;
+	export let useMoreInfo = false;
 	export let promotion: Promotion;
 	const { title, image, code, disclaimer, investment, rating, reward, rewardType, url, isMoney } =
 		promotion;
 </script>
 
 <div
-	class="flex flex-col align-center w-72 p-4 rounded-xl text-center border-2 border-gray-900 shadow-[5px_5px_rgba(0,_64,_128,_0.4),_10px_10px_rgba(0,_64,_128,_0.3),_15px_15px_rgba(0,_64,_128,_0.2),_20px_20px_rgba(0,_64,_128,_0.1),_25px_25px_rgba(0,_64,_128,_0.05)]
-"
+	class={`flex flex-col mx-auto align-center bg-gray-100 w-72 p-4 rounded-xl text-center border-2 border-gray-900 ${useShadow && "shadow-[5px_5px_rgba(0,_64,_128,_0.4),_10px_10px_rgba(0,_64,_128,_0.3),_15px_15px_rgba(0,_64,_128,_0.2),_20px_20px_rgba(0,_64,_128,_0.1),_25px_25px_rgba(0,_64,_128,_0.05)]"}`}
 >
 	<img
 		src={image}
@@ -29,9 +30,11 @@
 	</div>
 	<p class="font-bold text-lg">{isMoney ? "in " : ""}{rewardType}</p>
 
-	<button class="mt-4 bg-brand text-text-primary -skew-x-12 w-fit mx-auto px-4 py-1"
-		>More Info</button
-	>
+	{#if useMoreInfo}
+		<button class="mt-4 bg-brand text-text-primary -skew-x-12 w-fit mx-auto px-4 py-1"
+			>More Info</button
+		>
+	{/if}
 	<a href={url} target="_blank">
 		<button
 			class="mt-1 bg-secondary-200 w-fit mx-auto px-12 py-2 mb-2 font-bold rounded-md text-xl hover:bg-secondary-100 hover:scale-105 transition-all duration-200 ease-in-out"

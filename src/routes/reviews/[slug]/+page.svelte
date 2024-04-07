@@ -1,4 +1,5 @@
 <script>
+	import Card from "$lib/Card.svelte";
 	import SectionCard from "$lib/SectionCard.svelte";
 	import Stars from "$lib/Stars.svelte";
 
@@ -22,12 +23,15 @@
 	console.log(review);
 </script>
 
-<div class="max-w-5xl mx-auto mt-28 flex flex-col gap-6">
+<div class="max-w-5xl mx-auto mt-28">
 	<div class="grid grid-cols-6 gap-6">
-		<div class="flex flex-col gap-4 col-span-4">
-			<!-- <section class="flex gap-6 shadow-primary bg-gray-100 rounded-lg"> -->
-			<SectionCard style="flex gap-6">
-				<img class="w-52 rounded-l-lg" src={image} alt={title} />
+		<div class="flex flex-col gap-4 col-span-6 lg:col-span-4">
+			<SectionCard style="flex gap-0 sm:gap-6 flex-col sm:flex-row">
+				<img
+					class="w-52 h-52 sm:rounded-l-lg mx-auto rounded-full mt-6 sm:mt-0"
+					src={image}
+					alt={title}
+				/>
 				<div class="p-4 w-full">
 					<h1
 						class="mx-auto mb-2 w-fit text-lg text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold"
@@ -50,14 +54,19 @@
 							/>
 						{/each}
 					</div>
-					<!-- <p>
-						<span class="font-bold">Games:</span>
-						{#each games as game, i}
-							{game}{#if i < games.length - 1},&nbsp;
-							{/if}
-						{/each}
-					</p> -->
 				</div>
+			</SectionCard>
+			<SectionCard style="p-4">
+				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+					Games
+				</h2>
+				<ul class="flex flex-wrap gap-x-2">
+					{#each games as game, i}
+						<li>
+							{game}{#if i < games.length - 1},{/if}
+						</li>
+					{/each}
+				</ul>
 			</SectionCard>
 			<SectionCard style="p-4">
 				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
@@ -65,20 +74,26 @@
 				</h2>
 				<p>{description}</p>
 			</SectionCard>
+			<SectionCard style="p-4">
+				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+					How To Register
+				</h2>
+				{howToRegister}
+			</SectionCard>
 		</div>
-		<SectionCard style="p-4 col-span-2">
-			{welcomeOffer}
-		</SectionCard>
+		<div class="col-span-6 lg:col-span-2 flex gap-4 flex-col sm:flex-row lg:flex-col">
+			<SectionCard style="p-4 bg-gray-800 w-full">
+				<h2 class="mb-10 w-fit text-md bg-gray-100 py-1.5 px-6 rounded-md font-bold">
+					Welcome Offer
+				</h2>
+				<Card promotion={welcomeOffer} />
+			</SectionCard>
+			<SectionCard style="p-4 mt-4 w-full">
+				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+					Pros & Cons
+				</h2>
+				pros cons
+			</SectionCard>
+		</div>
 	</div>
-	<div class="flex">
-		<section class="bg-orange-500">
-			{welcomeOffer}
-		</section>
-		<section class="bg-green-400">
-			{howToRegister}
-		</section>
-	</div>
-	<section class="bg-pink-600">
-		{disclaimer}
-	</section>
 </div>
