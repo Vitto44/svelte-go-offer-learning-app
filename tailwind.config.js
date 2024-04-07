@@ -4,18 +4,21 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#004080",
+				brand: "#004080",
 				secondary: {
-					100: "#FFA300",
-					200: "#FFA500",
+					100: "#ffb633",
+					200: "#FFA400",
 				},
 				text: {
 					primary: "#ffffff",
 					gray: "#666666",
 				},
-				fontFamily: {
-					sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
-				},
+			},
+			fontFamily: {
+				sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+			},
+			boxShadow: {
+				primary: "0px 3px 8px rgba(0, 0, 0, 0.24)",
 			},
 		},
 	},

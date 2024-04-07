@@ -4,7 +4,7 @@
 
 <header>
 	<div
-		class="bg-gradient-to-r from-primary to-cyan-600 text-stone-100 max-w-5xl mx-auto rounded-xl p-8 grid grid-cols-3 relative mt-28 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+		class="bg-gradient-to-r from-brand to-cyan-600 text-stone-100 mx-auto rounded-xl p-8 grid grid-cols-3 relative mt-28 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
 	>
 		<div class=" flex gap-4 md:gap-8 flex-col col-span-3 sm:col-span-2">
 			<h1 class="font-semibold text-2xl md:text-5xl">

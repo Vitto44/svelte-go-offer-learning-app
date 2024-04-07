@@ -38,23 +38,6 @@
 				class={`py-3`}
 				class:bg-gray-300={$page.route.id?.match("blog")}>Blog</a
 			>
-			<ul class="flex justify-center items-center">
-				<li class="w-12">
-					<Cz />
-				</li>
-				<li class="w-12 grayscale">
-					<Sk />
-				</li>
-				<li class="w-12 grayscale">
-					<Ie />
-				</li>
-				<li class="w-12 grayscale">
-					<Us />
-				</li>
-				<li class="w-12 grayscale">
-					<Gb />
-				</li>
-			</ul>
 		</ul>
 	</nav>
 </header>

@@ -1,21 +1,26 @@
+<script>
+	import ReviewCard from "$lib/ReviewCard.svelte";
+
+	export let data;
+
+	const { reviewList } = data;
+
+	console.log(reviewList);
+</script>
+
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="text-column">
-	<h1>About this reviews</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
+<div
+	class="mx-auto gap-10 p-8 mb-8 rounded-2xl flex flex-row bg-gray-100 flex-wrap justify-center shadow-primary mt-10"
+>
+	{#if reviewList && reviewList.length !== 0}
+		{#each reviewList as review (review.id)}
+			<ReviewCard {review} />
+		{/each}
+	{:else}
+		<p>No reviews found</p>
+	{/if}
 </div>

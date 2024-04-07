@@ -2,7 +2,7 @@
 	export let rating = 0;
 </script>
 
-<div class="flex mx-auto mb-3">
+<div class="flex mx-auto">
 	{#each Array(5) as _, index (index)}
 		<svg
 			class="w-4 h-4 ms-1"

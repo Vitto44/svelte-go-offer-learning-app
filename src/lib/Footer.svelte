@@ -12,7 +12,7 @@
 
 <footer class="max-w-5xl mx-auto gap-8 my-8">
 	<div
-		class="flex flex-wrap justify-center gap-4 bg-gray-100 px-8 py-4 mx-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+		class="flex flex-wrap justify-center gap-4 bg-gray-100 px-8 py-4 mx-4 rounded-2xl shadow-primary"
 	>
 		<p class="text-text-primary bg-gray-800 px-4 py-2 rounded-md">© Certain Wager</p>
 		<ul class="flex gap-3 py-2">
