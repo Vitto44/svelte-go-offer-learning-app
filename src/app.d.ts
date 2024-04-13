@@ -19,6 +19,7 @@ declare global {
 		code: string;
 		disclaimer: string;
 		isMoney?: boolean;
+		howToRegister: string;
 	}
 	interface Review {
 		id: number;

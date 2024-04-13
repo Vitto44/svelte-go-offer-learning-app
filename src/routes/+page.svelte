@@ -7,18 +7,20 @@
 	import { pomos } from "$lib/stores/store";
 	import { onDestroy } from "svelte";
 	import Tooltip from "$lib/Tooltip.svelte";
+	import MoreInfoModal from "$lib/MoreInfoModal.svelte";
 
 	export let promotions: Promotion[] = [];
 
 	const unsubscribePromos = pomos.subscribe(async (p) => {
 		promotions = await p;
-		console.log(promotions);
 	});
 
 	// Cleanup the subscription
 	onDestroy(() => {
 		unsubscribePromos();
 	});
+
+	let cardID = 0;
 </script>
 
 <svelte:head>
@@ -41,7 +43,13 @@
 		class=" mx-auto gap-10 p-8 mb-8 rounded-2xl flex flex-row bg-gray-100 flex-wrap justify-center shadow-primary"
 	>
 		{#each promotions as promotion (promotion.id)}
-			<Card {promotion} useShadow useMoreInfo />
+			<Card {promotion} useShadow useMoreInfo setCardID={(id) => (cardID = id)} />
 		{/each}
+		{#if cardID}
+			<MoreInfoModal
+				card={promotions.find((c) => c.id === cardID)?.howToRegister}
+				closeModal={() => (cardID = 0)}
+			/>
+		{/if}
 	</section>
 </section>

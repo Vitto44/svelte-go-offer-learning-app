@@ -12,6 +12,7 @@
 			"rewardType": "Free Bets",
 			"code": "PROMO1",
 			"isMoney": true,
+			"howToRegister": "<div>\n    <h3 class='text-lg font-bold'>\n        Claim 100 Free Spins and a 100% bonus of up to £500 with Bet Fortune!\n    </h3>\n    <ul class='list-decimal ml-4 flex flex-col gap-2 mt-1'>\n        <li>\n            <p>\n                Follow the link: <a\n                    class='text-secondary-200 font-bold hover:underline'\n                    href='https://betfortune.com'>Bet Fortune</a\n                >\n            </p>\n        </li>\n        <li>\n            <p>Fill in the registration form</p>\n\n            <img\n                src='https://1.bp.blogspot.com/-h095LHE5LDA/X_bRX_U4wSI/AAAAAAAAAHs/zFL1e6o92pYQNrrkLRplq7nwTgH7vm1PwCLcBGAsYHQ/s1280/Responsive%2BRegistration%2BForm%2Bin%2BHTML%2B%2526%2BCSS.webp'\n                alt='Sign Up Button'\n                class='h-60'\n            />\n        </li>\n        <li>\n            <p>Make a deposit of at least £10</p>\n        </li>\n        <li>\n            <p class='font-bold'>Enjoy your bonus!</p>\n        </li>\n    </ul>\n</div>",
 			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
 		},
 		{
@@ -40,6 +41,7 @@
 			"rewardType": "Free Spins",
 			"code": "PROMO3",
 			"isMoney": true,
+			"howToRegister": "<div>\n    <h3 class='text-lg font-bold'>\n        Claim 100 Free Spins and a 100% bonus of up to £500 with Bet Fortune!\n    </h3>\n    <ul class='list-decimal ml-4 flex flex-col gap-2 mt-1'>\n        <li>\n            <p>\n                Follow the link: <a\n                    class='text-secondary-200 font-bold hover:underline'\n                    href='https://betfortune.com'>Bet Fortune</a\n                >\n            </p>\n        </li>\n        <li>\n            <p>Fill in the registration form</p>\n\n            <img\n                src='https://1.bp.blogspot.com/-h095LHE5LDA/X_bRX_U4wSI/AAAAAAAAAHs/zFL1e6o92pYQNrrkLRplq7nwTgH7vm1PwCLcBGAsYHQ/s1280/Responsive%2BRegistration%2BForm%2Bin%2BHTML%2B%2526%2BCSS.webp'\n                alt='Sign Up Button'\n                class='h-60'\n            />\n        </li>\n        <li>\n            <p>Make a deposit of at least £10</p>\n        </li>\n        <li>\n            <p class='font-bold'>Enjoy your bonus!</p>\n        </li>\n    </ul>\n</div>",
 			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply."
 		},
 		{
@@ -166,7 +168,6 @@
 			"availableCountries": ["GB", "DE", "SE"],
 			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply.",
 			"description": "Casino A is a great casino with a wide range of games and a great user experience. It is licensed by the UKGC and is available in the UK, Germany and Sweden.",
-			"howToRegister": "Register with the link provided and use the promo code WELCOME40 to get your bonus.",
 			"welcomeOffer": {
 				"id": 3,
 				"title": "Promo 3",
@@ -194,7 +195,6 @@
 			"availableCountries": ["SK", "CZ"],
 			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply.",
 			"description": "Casino B is a great casino with a wide range of games and a great user experience. It is licensed by the UKGC and is available in the UK, Germany and Sweden.",
-			"howToRegister": "Register with the link provided and use the promo code WELCOME40 to get your bonus.",
 			"welcomeOffer": {
 				"id": 3,
 				"title": "Promo 3",
@@ -222,7 +222,6 @@
 			"availableCountries": ["SK", "CZ"],
 			"disclaimer": "New UK 18+ only. Register (excl. 13/04/2024) with promo code WELCOME40, Bet £10+ on Sports in one transaction within 7 days of registering. Get £30 Free Bets & £10 free spins within 10hrs of bet settlement. Bonuses expire 7 days after issue. Min odds, eligibility & payment exclusions apply. T&Cs apply.",
 			"description": "Casino B is a great casino with a wide range of games and a great user experience. It is licensed by the UKGC and is available in the UK, Germany and Sweden.",
-			"howToRegister": "Register with the link provided and use the promo code WELCOME40 to get your bonus.",
 			"welcomeOffer": {
 				"id": 3,
 				"title": "Promo 3",
@@ -247,7 +246,6 @@
 				"pros": ["Great user experience", "Wide range of games", "Licensed by the UKGC"],
 				"cons": ["Long withdrawal times", "High wagering requirements"]
 			},
-			"howToRegister": "<div>\n    <h3 class='text-lg font-bold'>\n        Claim 100 Free Spins and a 100% bonus of up to £500 with Bet Fortune!\n    </h3>\n    <ul class='list-decimal ml-4 flex flex-col gap-2 mt-1'>\n        <li>\n            <p>\n                Follow the link: <a\n                    class='text-secondary-200 font-bold hover:underline'\n                    href='https://betfortune.com'>Bet Fortune</a\n                >\n            </p>\n        </li>\n        <li>\n            <p>Fill in the registration form</p>\n\n            <img\n                src='https://1.bp.blogspot.com/-h095LHE5LDA/X_bRX_U4wSI/AAAAAAAAAHs/zFL1e6o92pYQNrrkLRplq7nwTgH7vm1PwCLcBGAsYHQ/s1280/Responsive%2BRegistration%2BForm%2Bin%2BHTML%2B%2526%2BCSS.webp'\n                alt='Sign Up Button'\n                class='h-60'\n            />\n        </li>\n        <li>\n            <p>Make a deposit of at least £10</p>\n        </li>\n        <li>\n            <p class='font-bold'>Enjoy your bonus!</p>\n        </li>\n    </ul>\n</div>",
 			"rating": 5,
 			"category": "Sports",
 			"games": [
@@ -289,6 +287,7 @@
 			"description": "Casino B is a great casino with a wide range of games and a great user experience. It is licensed by the UKGC and is available in the UK, Germany and Sweden.",
 			"welcomeOffer": {
 				"id": 3,
+				"howToRegister": "<div>\n    <h3 class='text-lg font-bold'>\n        Claim 100 Free Spins and a 100% bonus of up to £500 with Bet Fortune!\n    </h3>\n    <ul class='list-decimal ml-4 flex flex-col gap-2 mt-1'>\n        <li>\n            <p>\n                Follow the link: <a\n                    class='text-secondary-200 font-bold hover:underline'\n                    href='https://betfortune.com'>Bet Fortune</a\n                >\n            </p>\n        </li>\n        <li>\n            <p>Fill in the registration form</p>\n\n            <img\n                src='https://1.bp.blogspot.com/-h095LHE5LDA/X_bRX_U4wSI/AAAAAAAAAHs/zFL1e6o92pYQNrrkLRplq7nwTgH7vm1PwCLcBGAsYHQ/s1280/Responsive%2BRegistration%2BForm%2Bin%2BHTML%2B%2526%2BCSS.webp'\n                alt='Sign Up Button'\n                class='h-60'\n            />\n        </li>\n        <li>\n            <p>Make a deposit of at least £10</p>\n        </li>\n        <li>\n            <p class='font-bold'>Enjoy your bonus!</p>\n        </li>\n    </ul>\n</div>",
 				"title": "Promo 3",
 				"image": "https://static.vecteezy.com/system/resources/thumbnails/011/883/296/small/modern-graphic-leaf-abstrack-with-water-drop-colorful-logo-good-for-technology-logo-fruits-logo-fresh-logo-nature-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg",
 				"url": "http://www.google.com",

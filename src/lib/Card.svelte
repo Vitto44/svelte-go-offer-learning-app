@@ -4,8 +4,21 @@
 	export let useShadow = false;
 	export let useMoreInfo = false;
 	export let promotion: Promotion;
-	const { title, image, code, disclaimer, investment, rating, reward, rewardType, url, isMoney } =
-		promotion;
+	export let setCardID: (id: number) => void;
+
+	const {
+		title,
+		id,
+		image,
+		code,
+		disclaimer,
+		investment,
+		rating,
+		reward,
+		rewardType,
+		url,
+		isMoney,
+	} = promotion;
 </script>
 
 <div
@@ -31,9 +44,14 @@
 	<p class="font-bold text-lg">{isMoney ? "in " : ""}{rewardType}</p>
 
 	{#if useMoreInfo}
-		<button class="mt-4 bg-brand text-text-primary -skew-x-12 w-fit mx-auto px-4 py-1"
-			>More Info</button
+		<button
+			on:click={() => {
+				setCardID(id);
+			}}
+			class="mt-4 bg-brand text-text-primary -skew-x-12 w-fit mx-auto px-4 py-1"
 		>
+			How To Claim
+		</button>
 	{/if}
 	<a href={url} target="_blank">
 		<button

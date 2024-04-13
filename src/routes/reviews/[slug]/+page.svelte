@@ -19,6 +19,8 @@
 		howToRegister,
 		prosCons,
 	} = review;
+
+	console.log(welcomeOffer);
 </script>
 
 <div class="max-w-5xl mx-auto mt-8 md:mt-28">
@@ -54,12 +56,12 @@
 					</div>
 				</div>
 			</SectionCard>
-			{#if howToRegister}
+			{#if welcomeOffer.howToRegister}
 				<SectionCard style="p-4">
 					<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
 						How To Register
 					</h2>
-					{@html howToRegister}
+					{@html welcomeOffer.howToRegister}
 				</SectionCard>
 			{/if}
 			{#if games && games.length > 0}
