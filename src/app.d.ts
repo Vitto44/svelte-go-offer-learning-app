@@ -6,6 +6,19 @@ declare global {
 		type: string;
 		niche: string;
 	}
+	interface BlogCard {
+		title: string;
+		content: string;
+		image: string;
+	}
+	interface BlogPost {
+		title: string;
+		id: number;
+		content: string;
+		image: string;
+		promotions: Promotion[];
+		articles: BlogCard[];
+	}
 	interface Promotion {
 		id: number;
 		title: string;

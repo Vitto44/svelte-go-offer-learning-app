@@ -16,11 +16,8 @@
 		availableCountries,
 		games,
 		welcomeOffer,
-		howToRegister,
 		prosCons,
 	} = review;
-
-	console.log(welcomeOffer);
 </script>
 
 <div class="max-w-5xl mx-auto mt-8 md:mt-28">
