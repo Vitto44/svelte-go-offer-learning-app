@@ -17,13 +17,11 @@
 		games,
 		welcomeOffer,
 		howToRegister,
-		disclaimer,
+		prosCons,
 	} = review;
-
-	console.log(review);
 </script>
 
-<div class="max-w-5xl mx-auto mt-28">
+<div class="max-w-5xl mx-auto mt-8 md:mt-28">
 	<div class="grid grid-cols-6 gap-6">
 		<div class="flex flex-col gap-4 col-span-6 lg:col-span-4">
 			<SectionCard style="flex gap-0 sm:gap-6 flex-col sm:flex-row">
@@ -56,30 +54,36 @@
 					</div>
 				</div>
 			</SectionCard>
-			<SectionCard style="p-4">
-				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
-					Games
-				</h2>
-				<ul class="flex flex-wrap gap-x-2">
-					{#each games as game, i}
-						<li>
-							{game}{#if i < games.length - 1},{/if}
-						</li>
-					{/each}
-				</ul>
-			</SectionCard>
-			<SectionCard style="p-4">
-				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
-					Description
-				</h2>
-				<p>{description}</p>
-			</SectionCard>
-			<SectionCard style="p-4">
-				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
-					How To Register
-				</h2>
-				{howToRegister}
-			</SectionCard>
+			{#if howToRegister}
+				<SectionCard style="p-4">
+					<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+						How To Register
+					</h2>
+					{@html howToRegister}
+				</SectionCard>
+			{/if}
+			{#if games && games.length > 0}
+				<SectionCard style="p-4">
+					<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+						Games
+					</h2>
+					<ul class="flex flex-wrap gap-x-2">
+						{#each games as game, i}
+							<li>
+								{game}{#if i < games.length - 1},{/if}
+							</li>
+						{/each}
+					</ul>
+				</SectionCard>
+			{/if}
+			{#if description}
+				<SectionCard style="p-4">
+					<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+						Description
+					</h2>
+					<p>{description}</p>
+				</SectionCard>
+			{/if}
 		</div>
 		<div class="col-span-6 lg:col-span-2 flex gap-4 flex-col sm:flex-row lg:flex-col">
 			<SectionCard style="p-4 bg-gray-800 w-full">
@@ -88,12 +92,27 @@
 				</h2>
 				<Card promotion={welcomeOffer} />
 			</SectionCard>
-			<SectionCard style="p-4 mt-4 w-full">
-				<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
-					Pros & Cons
-				</h2>
-				pros cons
-			</SectionCard>
+			{#if prosCons}
+				<SectionCard style="p-4 mt-4 w-full">
+					<h2 class="mb-2 w-fit text-md text-gray-100 bg-gray-800 py-1.5 px-6 rounded-md font-bold">
+						Pros & Cons
+					</h2>
+					<h3 class="mt-2 font-bold text-lg">Pros</h3>
+					<hr class="h-1 w-8 mb-2 bg-green-600 rounded-xl" />
+					<ul class="list-disc ml-5">
+						{#each prosCons.pros as pro}
+							<li>{pro}</li>
+						{/each}
+					</ul>
+					<h3 class="mt-2 font-bold text-lg">Cons</h3>
+					<hr class="h-1 w-8 mb-2 bg-red-600 rounded-xl" />
+					<ul class="list-disc ml-5">
+						{#each prosCons.cons as c}
+							<li>{c}</li>
+						{/each}
+					</ul>
+				</SectionCard>
+			{/if}
 		</div>
 	</div>
 </div>
