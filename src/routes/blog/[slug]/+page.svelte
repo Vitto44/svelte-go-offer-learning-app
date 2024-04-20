@@ -32,7 +32,7 @@
 			<h1 class="">share</h1>
 		</SectionCard>
 
-		<SectionCard style="col-span-6 md:col-span-4 p-4">
+		<SectionCard style="col-span-6 md:col-span-4 p-4 h-fit">
 			{#if content}
 				{@html content}
 			{:else}
@@ -48,7 +48,7 @@
 			</SectionCard>
 			<SectionCard style="py-12 flex flex-col gap-12">
 				{#each articles as article}
-					<ArticleCard {article} />
+					<ArticleCard {article} style="mx-auto" />
 				{/each}
 			</SectionCard>
 		</div>

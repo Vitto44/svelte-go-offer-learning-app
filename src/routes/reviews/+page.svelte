@@ -4,8 +4,6 @@
 	export let data;
 
 	const { reviewList } = data;
-
-	console.log(reviewList);
 </script>
 
 <svelte:head>

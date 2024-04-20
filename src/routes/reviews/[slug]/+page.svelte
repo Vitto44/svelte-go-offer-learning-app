@@ -23,7 +23,7 @@
 <div class="max-w-5xl mx-auto mt-8 md:mt-28">
 	<div class="grid grid-cols-6 gap-6">
 		<div class="flex flex-col gap-4 col-span-6 lg:col-span-4">
-			<SectionCard style="flex gap-0 sm:gap-6 flex-col sm:flex-row">
+			<SectionCard style="flex gap-0 sm:gap-6 flex-col sm:flex-row bg-secondary-200">
 				<img
 					class="w-52 h-52 sm:rounded-l-lg mx-auto rounded-full mt-6 sm:mt-0"
 					src={image}
@@ -35,21 +35,23 @@
 					>
 						{title}
 					</h1>
-					<p><span class="font-bold">Category:</span> {category}</p>
-					<div class="flex w-fit">
-						<p class="font-bold">Rating:</p>
-						<Stars {rating} />
-					</div>
-					<p><span class="font-bold">Licensed By:</span> {licensedBy}</p>
-					<div class="flex w-fit gap-1">
-						<p class="font-bold mt-1">Countries:</p>
-						{#each availableCountries as country}
-							<img
-								src={`https://flagicons.lipis.dev/flags/4x3/${country.toLowerCase()}.svg`}
-								alt={`${country} flag`}
-								class="w-8 h-8"
-							/>
-						{/each}
+					<div class="bg-gray-100 p-2 rounded-lg">
+						<p><span class="font-bold">Category:</span> {category}</p>
+						<div class="flex w-fit">
+							<p class="font-bold">Rating:</p>
+							<Stars {rating} />
+						</div>
+						<p><span class="font-bold">Licensed By:</span> {licensedBy}</p>
+						<div class="flex w-fit gap-1">
+							<p class="font-bold mt-1">Countries:</p>
+							{#each availableCountries as country}
+								<img
+									src={`https://flagicons.lipis.dev/flags/4x3/${country.toLowerCase()}.svg`}
+									alt={`${country} flag`}
+									class="w-8 h-8"
+								/>
+							{/each}
+						</div>
 					</div>
 				</div>
 			</SectionCard>

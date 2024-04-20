@@ -10,6 +10,8 @@ declare global {
 		title: string;
 		content: string;
 		image: string;
+		id: number;
+		cardText: string;
 	}
 	interface BlogPost {
 		title: string;
