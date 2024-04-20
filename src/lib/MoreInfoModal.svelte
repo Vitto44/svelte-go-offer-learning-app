@@ -29,13 +29,13 @@
 <div
 	on:click={bgClose}
 	on:keydown={handleKeyDown}
-	class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50"
+	class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-80"
 >
-	F
 	<div class="absolute mx-5" on:click={stopPropagation} on:keydown={handleKeyDown}>
-		<SectionCard style="p-6 pt-14 max-w-5xl">
-			<button class="absolute top-0 right-0 p-4 text-2xl text-red-600" on:click={closeModal}
-				>❌</button
+		<SectionCard style="px-6 py-16 max-w-5xl max-h-[90vh] overflow-y-scroll">
+			<button
+				class="absolute top-2 right-2 md:right-4 p-2 text-lg text-red-600 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 ease-in-out hover:scale-105"
+				on:click={closeModal}>❌</button
 			>
 
 			{@html card}
