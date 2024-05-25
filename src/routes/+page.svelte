@@ -8,6 +8,7 @@
 	import { onDestroy } from "svelte";
 	import Tooltip from "$lib/Tooltip.svelte";
 	import MoreInfoModal from "$lib/MoreInfoModal.svelte";
+	import NewsLetter from "$lib/NewsLetter.svelte";
 
 	export let promotions: Promotion[] = [];
 
@@ -40,7 +41,7 @@
 	</section>
 
 	<section
-		class=" mx-auto gap-10 p-8 mb-8 rounded-2xl flex flex-row bg-gray-100 flex-wrap justify-center shadow-primary"
+		class=" mx-auto gap-8 p-8 mb-8 rounded-2xl flex flex-col bg-gray-100 flex-wrap justify-center shadow-primary"
 	>
 		{#each promotions as promotion (promotion.id)}
 			<Card {promotion} useShadow useMoreInfo setCardID={(id) => (cardID = id)} />
@@ -51,5 +52,6 @@
 				closeModal={() => (cardID = 0)}
 			/>
 		{/if}
+		<NewsLetter />
 	</section>
 </section>

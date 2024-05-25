@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				brand: "#004080",
+				brandLight: "#0891b2 ",
 				secondary: {
 					100: "#ffb633",
 					200: "#FFA400",
