@@ -9,11 +9,17 @@
 	import Tooltip from "$lib/Tooltip.svelte";
 	import MoreInfoModal from "$lib/MoreInfoModal.svelte";
 	import NewsLetter from "$lib/NewsLetter.svelte";
+	import Loader from "$lib/Loader.svelte";
+	import ErrorMessage from "$lib/ErrorMessage.svelte";
 
-	export let promotions: Promotion[] = [];
+	let promotions: Promotion[] = [];
+	let loading = false;
+	let error: string | null = null;
 
-	const unsubscribePromos = pomos.subscribe(async (p) => {
-		promotions = await p;
+	const unsubscribePromos = pomos.subscribe((state) => {
+		loading = state.loading;
+		error = state.error;
+		promotions = state.data || [];
 	});
 
 	// Cleanup the subscription
@@ -43,17 +49,26 @@
 	<section
 		class=" mx-auto gap-10 px-4 py-10 mb-8 rounded-2xl flex flex-col bg-gray-100 flex-wrap justify-center shadow-primary"
 	>
-		{#each promotions as promotion, index (promotion.id)}
-			{#if Math.floor(promotions.length / 2) === index}
-				<NewsLetter />
+		{#if loading}
+			<Loader />
+		{/if}
+
+		{#if error}
+			<ErrorMessage {error} />
+		{/if}
+		{#if !loading && !error}
+			{#each promotions as promotion, index (promotion.id)}
+				{#if Math.floor(promotions.length / 2) === index}
+					<NewsLetter />
+				{/if}
+				<Card {promotion} useShadow useMoreInfo setCardID={(id) => (cardID = id)} />
+			{/each}
+			{#if cardID}
+				<MoreInfoModal
+					card={promotions.find((c) => c.id === cardID)?.howToRegister}
+					closeModal={() => (cardID = 0)}
+				/>
 			{/if}
-			<Card {promotion} useShadow useMoreInfo setCardID={(id) => (cardID = id)} />
-		{/each}
-		{#if cardID}
-			<MoreInfoModal
-				card={promotions.find((c) => c.id === cardID)?.howToRegister}
-				closeModal={() => (cardID = 0)}
-			/>
 		{/if}
 	</section>
 </section>

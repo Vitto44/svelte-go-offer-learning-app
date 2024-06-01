@@ -51,6 +51,12 @@ declare global {
 		description: string;
 		howToRegister: string;
 	}
+
+	interface Error {
+		status: number;
+		message: string;
+	}
+
 	namespace App {
 		// interface Error {}
 		// interface Locals {}

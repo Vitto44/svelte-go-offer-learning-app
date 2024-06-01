@@ -8,12 +8,36 @@ const initialData: StoreData = {
 
 export const filters = writable(initialData);
 
-export const pomos = derived(filters, async ($filters) => {
-	try {
-		const res = await fetch(`http://localhost:3000/${$filters.niche}`);
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error("Error fetching pomos", error);
-	}
-});
+export const pomos = derived(
+	filters,
+	($filters, set) => {
+		let cancelled = false;
+
+		const fetchData = async () => {
+			set({ loading: true, error: null, data: null });
+			try {
+				const res = await fetch(`http://localhost:3000/${$filters.niche}`).catch(() => {
+					throw new Error("Oops! Looks like you're offline.");
+				});
+				if (!cancelled) {
+					if (!res.ok) {
+						throw new Error("Oops! Something went wrong.");
+					}
+					const data = await res.json();
+					set({ loading: false, error: null, data });
+				}
+			} catch (error: Error) {
+				if (!cancelled) {
+					set({ loading: false, error: error.message, data: null });
+				}
+			}
+		};
+
+		fetchData();
+
+		return () => {
+			cancelled = true;
+		};
+	},
+	{ loading: false, error: null, data: null },
+);
