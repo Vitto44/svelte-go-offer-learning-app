@@ -2,16 +2,29 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ fetch }) => {
 	try {
-		const res = await fetch(`http://localhost:3000/companies`);
+		const res = await fetch(`http://localhost:3000/companies`).catch(() => {
+			throw new Error("Failed to fetch review list");
+		});
+		if (!res.ok) {
+			throw new Error("Failed to fetch review list");
+		}
 		const reviewList: Review[] = await res.json();
-
-		console.log(reviewList);
 
 		return {
 			reviewList,
+			loading: false,
+			error: null,
 		};
-	} catch (error) {
-		console.error("Error fetching review list:", error);
-		return { error };
+	} catch (error: unknown) {
+		let errorMessage = "Unknown error";
+		if (error instanceof Error) {
+			errorMessage = error.message;
+		}
+		console.error("Error fetching review list:", errorMessage);
+		return {
+			reviewList: [],
+			loading: false,
+			error: errorMessage,
+		};
 	}
 };

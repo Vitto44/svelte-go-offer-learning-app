@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
+	import ErrorMessage from "$lib/ErrorMessage.svelte";
+	import Loader from "$lib/Loader.svelte";
 	import ReviewCard from "$lib/ReviewCard.svelte";
 
 	export let data;
 
-	const { reviewList } = data;
+	const { reviewList, loading, error } = data;
 </script>
 
 <svelte:head>
@@ -14,7 +16,11 @@
 <div
 	class="mx-auto gap-10 p-8 mb-8 rounded-2xl flex flex-row bg-gray-100 flex-wrap justify-center shadow-primary mt-10"
 >
-	{#if reviewList && reviewList.length !== 0}
+	{#if loading}
+		<Loader />
+	{:else if error}
+		<ErrorMessage {error} />
+	{:else if reviewList && reviewList.length !== 0}
 		{#each reviewList as review (review.id)}
 			<ReviewCard {review} />
 		{/each}
