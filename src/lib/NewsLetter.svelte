@@ -11,15 +11,15 @@
 		<p class="text-white">
 			Get the latest free bets and bonuses from the best bookmakers and casinos.
 		</p>
-		<div class="mt-4 sm:grid grid-cols-7 gap-4">
+		<div class="mt-4 sm:grid grid-cols-10 gap-4">
 			<input
 				type="email"
 				placeholder="Enter your email"
-				class="w-full p-2 border border-gray-300 rounded-lg col-span-5"
+				class="w-full p-2 border border-gray-300 rounded-lg col-span-6"
 			/>
 			<button
 				type="submit"
-				class="w-full bg-secondary-200 font-bold py-2 col-span-2 rounded-lg mt-2 sm:mt-0"
+				class="w-full bg-secondary-200 font-bold py-2 col-span-4 rounded-lg mt-2 sm:mt-0"
 				>Subscribe</button
 			>
 		</div>

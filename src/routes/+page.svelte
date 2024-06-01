@@ -41,9 +41,12 @@
 	</section>
 
 	<section
-		class=" mx-auto gap-8 p-8 mb-8 rounded-2xl flex flex-col bg-gray-100 flex-wrap justify-center shadow-primary"
+		class=" mx-auto gap-10 px-4 py-10 mb-8 rounded-2xl flex flex-col bg-gray-100 flex-wrap justify-center shadow-primary"
 	>
-		{#each promotions as promotion (promotion.id)}
+		{#each promotions as promotion, index (promotion.id)}
+			{#if Math.floor(promotions.length / 2) === index}
+				<NewsLetter />
+			{/if}
 			<Card {promotion} useShadow useMoreInfo setCardID={(id) => (cardID = id)} />
 		{/each}
 		{#if cardID}
@@ -52,6 +55,5 @@
 				closeModal={() => (cardID = 0)}
 			/>
 		{/if}
-		<NewsLetter />
 	</section>
 </section>
