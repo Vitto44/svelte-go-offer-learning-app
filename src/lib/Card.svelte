@@ -5,7 +5,7 @@
 	export let isCard = false;
 	export let useMoreInfo = false;
 	export let promotion: Promotion;
-	export let setCardID: (id: number) => void;
+	export let setCardID = (id: number) => {};
 
 	const {
 		title,
