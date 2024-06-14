@@ -1,4 +1,4 @@
-package main
+package db
 
 import (
 	"database/sql"
@@ -8,17 +8,17 @@ import (
 	_ "github.com/lib/pq"
 )
 
-var db *sql.DB
+var DB *sql.DB
 
-func initDB() {
+func InitDB() {
 	var err error
 	connStr := "user=postgres dbname=certainwager sslmode=disable password=0000 host=172.18.96.1"
-	db, err = sql.Open("postgres", connStr)
+	DB, err = sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = db.Ping()
+	err = DB.Ping()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -49,7 +49,7 @@ func createTables() {
 	}
 
 	for _, query := range tableCreationQueries {
-		_, err := db.Exec(query)
+		_, err := DB.Exec(query)
 		if err != nil {
 			log.Fatalf("Error creating table: %v", err)
 		}
