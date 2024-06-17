@@ -18,7 +18,7 @@ func GetOffers(w http.ResponseWriter, r *http.Request) {
 
 	for rows.Next() {
 		var offer models.Offer
-		if err := rows.Scan(&offer.ID, &offer.Title, &offer.Description); err != nil {
+		if err := rows.Scan(&offer.ID, &offer.Title); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
