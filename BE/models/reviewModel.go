@@ -8,7 +8,7 @@ type Review struct {
     Image  string `json:"image"`
     Link string `json:"link"`
     Created string `json:"created"`
-    WelcomeOffer Offer `json:"welcomeOffer"`
+    Offer Offer `json:"offer"`
     Description string `json:"description"`
     Disclaimer string `json:"disclaimer"`
     AvailibleCountries []string `json:"availibleCountries"`

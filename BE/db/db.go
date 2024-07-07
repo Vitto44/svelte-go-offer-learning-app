@@ -1,9 +1,12 @@
 package db
 
 import (
+	"certainwager-be/models"
 	"database/sql"
 	"fmt"
 	"log"
+	"reflect"
+	"strings"
 
 	_ "github.com/lib/pq"
 )
@@ -29,31 +32,60 @@ func InitDB() {
 }
 
 func createTables() {
-	tableCreationQueries := []string{
-		`CREATE TABLE IF NOT EXISTS offers (
-			id SERIAL PRIMARY KEY,
-			title TEXT NOT NULL,
-			description TEXT NOT NULL
-		)`,
-		`CREATE TABLE IF NOT EXISTS reviews (
-			id SERIAL PRIMARY KEY,
-			title TEXT NOT NULL,
-			content TEXT NOT NULL,
-			rating INTEGER NOT NULL
-		)`,
-		`CREATE TABLE IF NOT EXISTS blogs (
-			id SERIAL PRIMARY KEY,
-			title TEXT NOT NULL,
-			content TEXT NOT NULL
-		)`,
-	}
+	createTableFromModel(models.Offer{}, "offers")
+	createTableFromModel(models.Review{}, "reviews")
+	createTableFromModel(models.Blog{}, "blogs")
+}
 
-	for _, query := range tableCreationQueries {
-		_, err := DB.Exec(query)
-		if err != nil {
-			log.Fatalf("Error creating table: %v", err)
+func createTableFromModel(model interface{}, tableName string) {
+	val := reflect.ValueOf(model)
+	typ := reflect.TypeOf(model)
+
+	var columns []string
+
+	for i := 0; i < val.NumField(); i++ {
+		field := typ.Field(i)
+		columnName := strings.ToLower(field.Name)
+		columnType := getSQLType(field.Type, field.Tag.Get("json"))
+
+		if columnType != "" {
+			columns = append(columns, fmt.Sprintf("%s %s", columnName, columnType))
 		}
 	}
 
-	fmt.Println("Tables created or already exist.")
+	query := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
+		id SERIAL PRIMARY KEY,
+		%s
+	)`, tableName, strings.Join(columns[1:], ",\n"))
+
+	_, err := DB.Exec(query)
+	if err != nil {
+		log.Fatalf("Error creating table %s: %v", tableName, err)
+	}
+
+	fmt.Printf("Table %s created or already exists.\n", tableName)
+}
+
+func getSQLType(t reflect.Type, jsonTag string) string {
+	switch t.Kind() {
+	case reflect.String:
+		return "TEXT"
+	case reflect.Int:
+		return "INTEGER"
+	case reflect.Bool:
+		return "BOOLEAN"
+	case reflect.Slice:
+		// Handling slices as TEXT for simplicity. In production, this should be handled better, perhaps using JSONB.
+		if t.Elem().Kind() == reflect.String {
+			return "TEXT"
+		}
+		return ""
+	case reflect.Struct:
+		if jsonTag == "offer" {
+			return "INTEGER REFERENCES offers(id)"
+		}
+		return "INTEGER" // Assuming foreign key or nested structure. Adjust as necessary.
+	default:
+		return "TEXT"
+	}
 }
