@@ -5,9 +5,11 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"os"
 	"reflect"
 	"strings"
 
+	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
@@ -15,7 +17,22 @@ var DB *sql.DB
 
 func InitDB() {
 	var err error
-	connStr := "user=postgres dbname=certainwager sslmode=disable password=0000 host=172.18.96.1"
+
+	err = godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+	
+	user := os.Getenv("DBUSER")
+	password := os.Getenv("DBPASSWORD")
+	host := os.Getenv("DBHOST")
+	dbname := os.Getenv("DBNAME")
+	sslmode := os.Getenv("SSLMODE")
+	
+
+	connStr := fmt.Sprintf("user=%s dbname=%s sslmode=%s password=%s host=%s ", user, dbname, sslmode, password, host)
+	// connStr := "user=postgres dbname=certainwager sslmode=disable password=0000 host=172.18.96.1"
+
 	DB, err = sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)

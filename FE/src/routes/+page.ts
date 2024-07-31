@@ -7,7 +7,7 @@ export const load: PageLoad = async ({ url }) => {
 		const type = url.searchParams.get("type") || "all";
 		const niche = url.searchParams.get("niche") || "sport";
 
-		// const res = await fetch(`http://localhost:3000/${niche}`);
+		// const res = await fetch(`${process.env.VITE_API_URL}/${niche}`);
 		// const promotions = await res.json();
 
 		filters.update((data) => ({ ...data, location, type, niche }));

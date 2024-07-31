@@ -13,7 +13,7 @@ export default function (stores, initial_value) {
 
 			async function load() {
 				try {
-					const res = await fetch(`http://localhost:3000/${$stores.niche}`);
+					const res = await fetch(`${process.env.VITE_API_URL}/${$stores.niche}`);
 					const data = await res.json();
 					set(data);
 				} catch (error) {

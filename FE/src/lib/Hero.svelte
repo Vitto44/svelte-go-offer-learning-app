@@ -8,15 +8,12 @@
 	>
 		<div class=" flex gap-4 md:gap-8 flex-col col-span-3 sm:col-span-2">
 			<h1 class="font-semibold text-2xl md:text-5xl">
-				Shortcut to <span class="text-secondary-200 font-bold">Free Bets</span>
+				Shortcut to <span class="text-secondary-200 font-bold">Free Bits</span>
 				<br class="hidden lg:inline-block" />
 				and
-				<span class="text-secondary-200 font-bold">Wins</span>!
+				<span class="text-secondary-200 font-bold">Blem</span>!
 			</h1>
-			<h2 class="text-sm md:text-base lg:text-lg sm:mr-12 lg:mr-0">
-				Get the latest free bets and bonuses from the best bookmakers and casinos. We have the best
-				free bets and bonuses for you to claim and win real money.
-			</h2>
+			<h2 class="text-sm md:text-base lg:text-lg sm:mr-12 lg:mr-0">Sum Description</h2>
 		</div>
 		<img
 			src={heroImage}
