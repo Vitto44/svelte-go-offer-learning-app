@@ -4,7 +4,7 @@ export const load: PageLoad = async ({ fetch, params }) => {
 	const { slug } = params;
 
 	try {
-		const res = await fetch(`http://localhost:3000/blog/${slug}`).catch(() => {
+		const res = await fetch(`${process.env.VITE_API_URL}/blog/${slug}`).catch(() => {
 			throw new Error("Failed to fetch blog post");
 		});
 

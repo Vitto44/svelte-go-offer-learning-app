@@ -1,18 +1,28 @@
 package main
 
 import (
-	"log"
-	"net/http"
-
 	"certainwager-be/db"
 	"certainwager-be/router"
+	"log"
+	"net/http"
+	"os"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
 	db.InitDB()
 
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	r := router.NewRouter()
 
-	log.Println("Server started at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", r))
+	port := os.Getenv("PORT")
+
+
+	log.Println("Server started at port " + port)
+	log.Fatal(http.ListenAndServe(":"+port, r))
 }

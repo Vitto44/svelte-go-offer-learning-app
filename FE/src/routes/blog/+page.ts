@@ -2,7 +2,7 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ fetch }) => {
 	try {
-		const res = await fetch(`http://localhost:3000/blog`).catch(() => {
+		const res = await fetch(`${process.env.VITE_API_URL}/blog`).catch(() => {
 			throw new Error("Failed to fetch blog list");
 		});
 		if (!res.ok) {

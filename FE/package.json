@@ -37,5 +37,8 @@
 	"type": "module",
 	"volta": {
 		"node": "22.2.0"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5"
 	}
 }

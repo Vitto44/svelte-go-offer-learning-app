@@ -2,7 +2,7 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ fetch }) => {
 	try {
-		const res = await fetch(`http://localhost:3000/companies`).catch(() => {
+		const res = await fetch(`${process.env.VITE_API_URL}/companies`).catch(() => {
 			throw new Error("Failed to fetch review list");
 		});
 		if (!res.ok) {

@@ -16,7 +16,7 @@ export const pomos = derived(
 		const fetchData = async () => {
 			set({ loading: true, error: null, data: null });
 			try {
-				const res = await fetch(`http://localhost:3000/${$filters.niche}`).catch(() => {
+				const res = await fetch(`${process.env.VITE_API_URL}/${$filters.niche}`).catch(() => {
 					throw new Error("Oops! Looks like you're offline.");
 				});
 				if (!cancelled) {
